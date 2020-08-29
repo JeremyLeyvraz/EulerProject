@@ -3,7 +3,7 @@
 namespace Solutions.UnitTests
 {
     /// <summary>
-    /// Solution for Problem_0003
+    /// Solution of Problem_0003
     /// </summary>
     [TestClass]
     public class Problem_0003

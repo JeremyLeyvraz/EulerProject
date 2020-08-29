@@ -4,7 +4,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace Solutions.UnitTests
 {
     /// <summary>
-    /// Solution for Problem_0001
+    /// Solution of Problem_0001
     /// </summary>
     [TestClass]
     public class Problem_0001
