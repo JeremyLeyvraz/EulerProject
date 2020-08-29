@@ -25,7 +25,7 @@ namespace Solutions.Helpers
                 if (!i.IsAPrimeNumber())
                     continue;
 
-                while (currentQuotient > 1 && (currentQuotient / (double)i) % 1 == 0)
+                while (currentQuotient > 1 && (currentQuotient / (double)i).IsInteger())
                 {
                     primeFactor.Add(i);
                     currentQuotient = currentQuotient / i;

@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Extensions\DoubleExtensions.cs" />
     <Compile Include="Extensions\IntegerExtensions.cs" />
     <Compile Include="Helpers\PrimeNumber.cs" />
     <Compile Include="Program.cs" />
@@ -51,6 +52,7 @@
     <Compile Include="Solutions\Problem_0002.cs" />
     <Compile Include="Solutions\Problem_0003.cs" />
     <Compile Include="Solutions\Problem_0004.cs" />
+    <Compile Include="Solutions\Problem_0005.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

@@ -38,7 +38,7 @@
             for (int i = 2; i < middle; i++)
             {
                 var quotient = x / (double)i;
-                if (quotient % 1 == 0)
+                if (quotient.IsInteger())
                     return false;
             }
 
