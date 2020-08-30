@@ -37,12 +37,23 @@
 
             for (int i = 2; i < middle; i++)
             {
-                var quotient = x / (double)i;
-                if (quotient.IsInteger())
+                if (x.IsDivideBy(i))
                     return false;
             }
 
             return true;
+        }
+
+        /// <summary>
+        /// Determine if x is divisible by y
+        /// </summary>
+        /// <param name="x"></param>
+        /// <param name="y"></param>
+        /// <returns>True if x is divide by y, false otherwise</returns>
+        public static bool IsDivideBy(this int x, int y)
+        {
+            var quotient = x / (double)y;
+            return quotient.IsInteger();
         }
     }
 }

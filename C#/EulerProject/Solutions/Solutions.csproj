@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="Extensions\DoubleExtensions.cs" />
     <Compile Include="Extensions\IntegerExtensions.cs" />
+    <Compile Include="Extensions\UlongExtensions.cs" />
     <Compile Include="Helpers\Arithmetic.cs" />
     <Compile Include="Helpers\Geometry.cs" />
     <Compile Include="Helpers\PrimeNumber.cs" />
@@ -59,6 +60,7 @@
     <Compile Include="Solutions\Problem_0007.cs" />
     <Compile Include="Solutions\Problem_0008.cs" />
     <Compile Include="Solutions\Problem_0009.cs" />
+    <Compile Include="Solutions\Problem_0010.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

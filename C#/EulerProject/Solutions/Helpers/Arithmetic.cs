@@ -1,4 +1,7 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using Solutions.Extensions;
 
 namespace Solutions.Helpers
 {
@@ -35,6 +38,31 @@ namespace Solutions.Helpers
                 product *= factor;
 
             return product;
+        }
+
+        /// <summary>
+        /// Apply the sieve of Eratosthene
+        /// </summary>
+        /// <param name="n">Max value of prime number</param>
+        /// <returns>List of all prime numbers under the max value passed in parameter</returns>
+        public static IList<ulong> ApplySieveOfEratosthenes(ulong n)
+        {
+            var maxNumberToCheck = Math.Sqrt(n);
+
+            var numberList = new List<ulong>();
+
+            for (ulong i = 2; i <= n; i++)
+            {
+                numberList.Add(i);
+            }
+
+            for (ulong i = 2; i <= maxNumberToCheck; i++)
+            {
+                numberList = numberList.Where(x => x <= i || !x.IsDivideBy(i)).ToList();
+            }
+
+            return numberList;
+
         }
     }
 }
