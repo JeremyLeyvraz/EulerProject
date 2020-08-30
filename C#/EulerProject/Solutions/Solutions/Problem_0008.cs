@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using Solutions.Helpers;
 
 namespace Solutions.Solutions
 {
@@ -64,7 +65,7 @@ namespace Solutions.Solutions
 
                 var factors = GetFactors(numberToDecompose);
 
-                var product = GetProductOf(factors);
+                var product = Arithmetic.GetProductOf(factors);
                 products.Add(product);
             }
 
@@ -90,19 +91,6 @@ namespace Solutions.Solutions
             return factors;
         }
 
-        /// <summary>
-        /// Get the product of the integer in the list
-        /// </summary>
-        /// <param name="factors">List of factors</param>
-        /// <returns>The product of all factors</returns>
-        private static ulong GetProductOf(IList<ulong> factors)
-        {
-            ulong product = 1;
 
-            foreach (ulong factor in factors)
-                product *= factor;
-
-            return product;
-        }
     }
 }
