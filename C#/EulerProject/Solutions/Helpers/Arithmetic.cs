@@ -62,7 +62,55 @@ namespace Solutions.Helpers
             }
 
             return numberList;
-
         }
+
+        /// <summary>
+        /// Get the sum from one to the number passed in parameter
+        /// </summary>
+        /// <param name="max">Max threshold to calculate the sum</param>
+        /// <returns>The sum from one to max. Zero if max < 1</returns>
+        public static int GetSumFromOneTo(int max)
+        {
+            var sum = 0;
+            for (int i = 1; i <= max; i++)
+                sum += i;
+
+            return sum;
+        }
+
+        /// <summary>
+        /// Get divisors of a number
+        /// </summary>
+        /// <param name="number">Number to get the divisors</param>
+        /// <returns></returns>
+        public static IList<int> GetDivisorOf(int number)
+        {
+            var divisors = new List<int>();
+            if (number <= 0)
+                return divisors;
+
+            int current = 1;
+            int max = number;
+            divisors.Add(1);
+            if (number != 1)
+            {
+                divisors.Add(number);
+            }
+
+            current++;
+            while (current < max)
+            {
+                if (number % current == 0)
+                {
+                    divisors.Add(current);
+                    max = number / current;
+                    if (max != current)
+                        divisors.Add(max);
+                }
+                current++;
+            }
+            return divisors;
+        }
+
     }
 }
