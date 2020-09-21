@@ -111,6 +111,5 @@ namespace Solutions.Helpers
             }
             return divisors;
         }
-
     }
 }
