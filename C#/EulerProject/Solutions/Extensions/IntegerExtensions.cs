@@ -55,5 +55,30 @@
             var quotient = x / (double)y;
             return quotient.IsInteger();
         }
+
+        /// <summary>
+        /// Determine if x and y have the same digits
+        /// </summary>
+        /// <param name="x"></param>
+        /// <param name="y"></param>
+        /// <returns></returns>
+        public static bool HasSameDigits(this int x, int y)
+        {
+            var xString = x + "";
+            var yString = y + "";
+
+            if (xString.Length != yString.Length)
+                return false;
+
+            foreach(char c in xString)
+            {
+                if (!yString.Contains(c + ""))
+                {
+                    return false;
+                }
+            }
+
+            return true;
+        }
     }
 }

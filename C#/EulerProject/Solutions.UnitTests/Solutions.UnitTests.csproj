@@ -63,6 +63,7 @@
     <Compile Include="Problem_0012.cs" />
     <Compile Include="Problem_0025.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Problem_0052.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
